@@ -1,0 +1,14 @@
+p{
+    background-color:azure; color:blue; border: dashed 10px aquamarine;
+    text-align:left;
+padding-top:50px;
+padding-right: 100px;
+}
+
+/* cmd +/ or ctrl +/
+opt +shift + a for alternative
+comment shortcut
+*/
+h1 {
+    font-size:60px;
+}
