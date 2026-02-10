@@ -1,0 +1,71 @@
+body {
+background-color: rgb(8, 0, 95);
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.please {
+   width: 100vw;  
+  height: 230px;
+  object-fit: contain ;
+  position:static;
+}
+.container {
+    display: flex;
+    /* Aligns items along the main axis (horizontally) with space around the content */
+    justify-content: space-between; 
+    /* Aligns items along the cross axis (vertically) in the center */
+    align-items: center; 
+    background-color: black;
+    /* Optional styling for visibility */
+    border: 2px solid rgb(194, 0, 0);
+    padding: 10px;
+    width: 750px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the container on the page */
+}
+
+.image {
+    /* Optional: ensures images don't grow or shrink to maintain size */
+    flex-shrink: 0; 
+    width: 100px; /* Adjust image size as needed */
+    height: auto;
+}
+
+.text {
+    /* Optional styling for visibility */
+    padding: 0 20px; /* Adds space around the text */
+    text-align: center;
+    font-size: 65px;
+    flex-grow: 1; /* Allows the text to take up the available space in the middle */
+    letter-spacing: 3px ;
+    color: red;
+}
+
+.container2 {
+    display: flex; /* Uses Flexbox for side-by-side layout */
+    gap: 20px; /* Adds space between the image and text columns */
+    max-width: 750px; /* Optional: Sets a maximum width for the whole container */
+    margin: 20px auto; /* Centers the container on the page */
+    padding: 20px;
+    background-color: #000000;
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column; /* Stacks images vertically in one column */
+    gap: 10px; /* Adds space between the images */
+    flex: 1; /* Allows the image column to grow and take available space */
+}
+
+.image-column img {
+    width: 100%; /* Makes images responsive and fit the column width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+.text-column {
+    flex: 2; 
+color: red;
+}
+.a {
+  text-align: center;
+}
+
+}

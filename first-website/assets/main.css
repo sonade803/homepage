@@ -1,3 +1,8 @@
+body{
+    background-color: lightskyblue;
+    font-size: 22px;
+    font-family:'Lobster', sans-serif;
+}
 p{
     background-color:azure; color:blue; border: dashed 10px aquamarine;
     text-align:left;
