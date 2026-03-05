@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(tennis-court-bg.jpg) ;
+background-repeat: no-repeat ;
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+margin:0;
+overflow: hidden;
+}
+
+.marquee-section {
+    position: relative;
+    min-height: 80px;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(250, 0, 0);
+    border: 3px solid #3c3227;
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    top: 0;
+}
+
+.marquee-section, .marquee-section * {
+    overflow: hidden;
+}
+
+.marquee {
+    white-space: nowrap;
+}
+
+.marquee-div {
+    position: absolute;
+    animation: move-left-to-right linear 13s infinite;
+}
+
+/* use this one to move from left to right direction */
+@keyframes move-left-to-right {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* use this one to move from right to left direction */
+@keyframes move-right-to-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/*.top-marquee {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(250, 0, 0);
+    border: 3px solid #3c3227;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    top: 0;
+    
+    
+}
+    */
+
+.tennis-court {
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    position:relative;
+    overflow:hidden;
+}
+
+.nene{
+display:flex;
+ width:320px;
+height:320px;
+object-fit: cover;
+position:relative;
+left:-240px;
+top:-120px;
+}
+
+.tennis-ball{
+  display:flex;
+  width:50px;
+  height:50px;
+  object-fit:cover;
+  position:relative;
+  top:-200px;  
+  left:-565px;
+  animation: move 2s infinite alternate-reverse;
+}
+
+@keyframes move{
+    50%{
+        transform: translateX(1170px);
+        rotate:10deg;
+    }
+}
+
+/*@keyframes move{
+    0%{
+    left:-565px;
+    }
+
+    100%{
+        left:605px;
+        rotate:900deg;
+    }
+}
+*/
+
+
+.luffy{
+display:flex;
+ width:290px;
+height:340px;
+object-fit: cover;
+position:relative;
+right:-270px;
+top:100px;
+z-index:-1;
+}
+

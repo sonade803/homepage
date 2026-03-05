@@ -1,0 +1,257 @@
+*{
+    box-sizing: border-box;
+}
+
+.mozilla-text {
+  font-family: "Mozilla Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(82, 247, 82);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.container {
+  padding:10px;
+  display:flex;
+  flex-direction: column;
+  background: rgb(0, 166, 25);
+  height:100vh;
+  gap: 10px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height:20%;
+  gap:10px;
+}
+
+.eye-sparkle {
+    background-color: rgb(232, 0, 0);
+    display:flex;
+    position:relative;
+    height:50px;
+    width:100px;
+    left:100px;
+    top:-250px;
+}
+
+.top-item {
+  width:100%;
+  height:100%;
+  background:rgb(178, 0, 148);
+}
+
+
+
+.bottom {
+  display: flex;
+  height:80%;
+  gap: 10px;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:rgb(255, 244, 164);
+  width:50%;
+  height:100%;
+  border-radius: 47%;
+  
+}
+
+.hairline {
+  background-color: rgb(169, 7, 136);
+    display:flex;
+    position:relative;
+    width:800px;
+    height:300px;
+    left: 100px;
+    top:-250px;  
+}
+
+.rectangle-front{
+    background-color: rgb(255, 0, 204);
+    display:flex;
+    position:relative;
+    width:900px;
+    height:300px;
+    left: 100px;
+    top:-250px;
+
+}
+
+.mouth{
+    background-color: rgb(231, 41, 76);
+    display:flex;
+    position:relative;
+    width:300px;
+    height:100px;
+    left: -100px;
+    top:200px;
+}
+
+.eye-white{
+display:flex;
+flex-direction: column;
+align-items: center;
+width:60px;
+height:50px;
+background-color: rgb(0, 255, 170);
+}
+
+.eye{
+    background-color: rgb(0, 255, 170);
+    display:flex;
+    width:80px;
+    height:100px;
+}
+
+.eye-thing{
+    display: flex;
+flex-direction: column; /* Stacks children vertically within the inner container */
+/* Optional properties: */
+align-items: center;
+width:300px;
+height:50px;               /* Allows containers to grow and share available space equally */
+background-color:rgb(255, 244, 164);
+}
+.left-item {
+  background:rgb(0, 255, 170);
+  display: flex;
+  width:80px;
+  height:100px;
+  justify-content: space-around;
+
+}
+
+.bang{
+    background-color: rgb(178, 0, 148);
+    height:250px;
+    width:300px;
+    display:flex;
+    justify-content:start;
+    align-self:flex-start;
+    align-content:flex-start;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width:30%;
+  height:100%;
+  gap:8px;
+}
+
+.baldie{
+    background-color: rgb(242, 0, 202);
+    display:flex;
+    position:relative;
+    width: 800px;
+    height:100%;
+    left: -700px;
+}
+
+.right-item {
+  height:100%;
+  background:rgb(200, 0, 148);
+}
+
+.triangle-1{
+display:inline-block;
+position:relative;
+background-color: rgb(255, 0, 238);
+height:100%;
+clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+}
+
+.eye-circle{
+ background-color: rgb(0, 255, 170);
+    display:flex;
+    position:relative;
+    width:25px;
+    height:180px;
+    left: -656px;
+    top:-305px;   
+}
+
+.stepping {
+  padding:10px;
+  display:flex;
+  flex-direction: column;
+  background: rgb(56, 112, 233);
+  height:600px;
+  width:700px;
+  gap: 10px;
+}
+
+.first-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:30%;
+  gap:10px;
+}
+
+.stone {
+  height: 200px;
+  width: 200px;
+  display:inline-block;
+  background-color: rgb(82, 247, 82);
+  border-radius: 50%;
+  flex-direction:inherit
+}
+
+.t-shirt{
+    height: 100px;
+  width: 100px;
+  display:inline-block;
+  background-color: rgb(82, 247, 82);
+  border-radius: 50%;
+  flex-direction:inherit
+}
+
+
+.row-container {
+    display: flex; /* Activates flexbox layout */
+    justify-content: space-between; /* Optional: adds space between items */
+    gap: 20px; /* Optional: adds space between the two containers */
+    background-color: blue;
+    width:800px;
+    height:900px;
+}
+
+.container-1, .container-2 {
+    flex: 1; /* Makes both containers equal width and stretch */
+    padding: 20px;
+    border: 1px solid #00ddff;
+    /* Optional colors for visibility */
+    background-color: #ffff00;
+}
+
+.other-arm {
+    display:flex;
+    position:relative;
+    gap:10px;
+    top:-315px;
+    left:600px;
+}
+
+.arm-dot{
+    height: 150px;
+  width: 150px;
+  display:table-column;
+  background-color: rgb(82, 247, 82);
+  border-radius: 50%;
+  flex-direction:inherit
+}

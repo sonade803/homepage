@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+}
+.box{
+    background:lightgray;
+    width: 200px;
+    height:200px;
+    /*animation-name: test;
+    animation-duration:4s;
+    animation-delay:2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear ;
+    animation-direction: alternate;
+    animation-fill-mode:both; */
+    animation:test 4s 2s infinite linear alternate both;
+}
+
+@keyframes test{
+    0%{
+    background-color: red;
+    height:200px;
+
+    }
+    100% {
+        background-color: yellow;
+        height:400px;
+    }
+}
+
+.container{
+    background-color: lightpink;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    position:relative;
+    overflow:hidden;
+
+    animation:blink 4s infinite alternate;
+}
+
+@keyframes blink{
+    0%{
+        scale:1 1;
+    }
+    100%{
+        scale:1 0;
+    }
+}
+.circle{
+    background-color: lightgrey;
+    width:100px;
+    height:100px;
+    border-radius: 100%;
+    animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+    0%{
+        background-color:lightgray;
+        scale:1;
+    }
+
+    100%{
+        background-color:lightyellow;
+        scale:1.4;
+    }
+}
+
+.square{
+    background-color: lightgrey;
+    width:100px;
+    height:100px;
+    animation: spin 4s infinite linear;
+}
+
+@keyframes spin {
+    0%{
+        transform:rotate(0);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+.mover {
+    background-color: lightgray;
+    width: 50px;
+    height:50px;
+    /* in order for an absolute position element to position itself relative to its container, the container also needs to be given a position other than absolute, usually relative*/
+    position:absolute;
+    bottom:0;
+    left:0;
+    animation: move 4s infinite;
+}
+
+@keyframes move{
+    0%{
+    left: -150px;
+    }
+
+    100%{
+        left:100%;
+        rotate:900deg;
+    }
+}
+
+.changer{
+    background: lightgrey;
+    width:100px;
+    height: 100px;
+    transition:background 2s, border-radius 2s, rotate 2s;
+}
+
+.changer:hover {
+    background:red;
+    border-radius:100%;
+    rotate:360deg;
+}
