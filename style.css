@@ -1,1 +1,41 @@
-body {background-color: aliceblue;}
+body 
+{background-image: url(starbackground.gif) ;
+background-repeat: repeat ;
+background-position: center;
+background-attachment: fixed;
+
+font-family: monospace;
+
+}
+
+.updates {
+  border-radius: 8px;
+  border: 4px double #ce4695;
+  outline-offset: -3px;
+  outline: 1px solid #fff;
+  background-image: url("con2.png");
+  grid-area: log;
+}
+
+h2{
+    margin-left: 20px;
+}
+
+.changelog {
+  max-height: 150px;
+  overflow: auto;
+}
+
+.changelog-entry{
+    text-align: justify;
+}
+.changelog p {
+  display: inline;
+}
+.changelog ul {
+  list-style: none;
+  padding: 0;
+}
+.changelog ul li {
+  padding: 0.3em;
+}

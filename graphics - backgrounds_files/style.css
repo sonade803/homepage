@@ -1,0 +1,369 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body {
+  background-color: white;
+  background-image: url(/gifs/bgs/star.gif);
+  background-attachment: fixed;
+  color: Maroon;
+  font-family: "MS Gothic", "Comic Sans MS", "Comic Sans", "Chalkboard SE", sans-serif;
+  font-size: 14px;
+  
+}
+
+@font-face {
+    font-family: "MS Gothic";
+    unicode-range: U+3000-30ff, U+ff00-ffef;
+}
+
+strong, h1 {
+  color: LightSeaGreen;
+}
+
+em {o
+  color: Violet;
+}
+
+html {m
+    cursor:url("https://rachychel.neocities.org/mushroomcursor.gif"), default;
+}
+
+a {
+    cursor:url("https://rachychel.neocities.org/mushroomcursor2.gif"), default;
+    animation: chover alternate 0.2s linear infinite forwards;
+}
+
+@keyframes chover {
+    0% {
+        cursor: url("https://rachychel.neocities.org/mushroomcursor.gif"), pointer;
+    }
+    100% {
+        cursor: url("https://rachychel.neocities.org/mushroomcursor2.gif"), pointer;
+    }
+}
+
+ /* unvisited link */
+a:link {
+  color: HotPink;
+}
+
+/* visited link */
+a:visited {
+  color: HotPink;
+}
+
+/* mouse over link */
+a:hover {
+ opacity: .5;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.centered {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.nav {
+    width: 80%;
+    max-width: 900px;
+    margin-bottom: -5px;
+    padding: 2px 10px 0;
+    align-content: center;
+}
+
+.button {
+  box-sizing: border-box;
+  width: 15%;
+  min-width: 99px;
+  margin: 5px 0;
+  display: inline-block;
+  height: 35px;
+  text-decoration: none;
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", monospace;
+  border-radius: 5px;
+  border: 1px solid MediumVioletRed;
+  text-align: center;
+  vertical-align: top;
+  padding: 5px 0px; 
+  box-shadow: -1px -2px 1px inset DarkGray, 1px 2px 1px 0px inset White, 1px 2px 0px 1px Plum;
+}
+
+.button a {
+  text-decoration: none;
+  font-size: 15px;
+  vertical-align: center;
+}
+
+.button:hover, .playbutton:hover {
+ opacity: .5;
+ cursor: url(https://rachychel.neocities.org/gifs/pikachu/picursorbutt.gif); 
+}
+
+.button:active, .playbutton:active {
+  opacity: 2;
+  box-shadow: 0px 0px 0px 0px #6495ED;
+  transform: translateY(3px) translateX(2px);
+}
+
+.playbutton {
+  box-sizing: border-box;
+  width: 36px;
+  margin: 2px 0;
+  display: inline-block;
+  height: 36px;
+  text-decoration: none;
+  font-size: 24px;
+  border-radius: 5px;
+  border: 1px solid MediumVioletRed;
+  text-align: center;
+  vertical-align: top;
+  padding: 2px 2px; 
+  box-shadow: -1px -2px 1px inset DarkGray, 1px 2px 1px 0px inset White, 1px 2px 0px 1px Plum;
+}
+
+@media (max-width: 874px) {
+  .button {
+    flex: 25%;
+  }
+}
+
+#bigbox {
+  background-image: url(/gifs/bgs/dot.gif);
+  border: 1px solid MediumVioletRed;
+  border-radius: 5px;
+  overflow: auto;
+  width: 90%;
+  max-width: 900px;
+  display: block;
+  background-size: auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  box-shadow: -1px -2px 1px inset LightGray, 3px 4px 1px inset White, 3px 4px 0px 1px Plum;
+}
+
+.funnybox {
+  box-sizing: border-box;
+ 	margin: 10px;
+  background-color: snow;
+  border: 1px solid #fd6e8d;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px; /* top, right, bottom, left*/
+  overflow: auto;
+  box-shadow: -1px -2px 1px inset LightGray, 3px 4px 1px inset White, 2px 3px 0px 1px Plum;
+}
+
+.funnybox ul {
+  text-align: left;
+}
+
+.secretbox {
+  box-sizing: border-box;
+ 	margin: 1px;
+  padding: 1px 1px 1px 1px; /* top, right, bottom, left*/
+  overflow: auto;
+}
+
+#smallbox1, #smallbox2 {
+  box-sizing: border-box;
+  width: calc(50% - 5px);
+  min-width: 200px;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px; /* top, right, bottom, left */
+  text-align: left;
+  overflow: auto;
+  box-shadow: -1px -2px 1px inset LightGray, 3px 4px 1px inset White, 2px 3px 0px 1px Plum;
+  flex: 1;
+}
+
+#smallbox1 {
+  background-color: #fef8e7;
+  border: 1px solid #fecd2f;
+}
+
+#smallbox2 {
+  background-color: #f0fafe;
+  border: 1px solid #87d7fd;
+}
+
+.thirds {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.onethirdbox, .twothirdsbox {
+  box-sizing: border-box;
+  min-width: 200px;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px; /* top, right, bottom, left */
+  text-align: left;
+  overflow: auto;
+  box-shadow: -1px -2px 1px inset LightGray, 3px 4px 1px inset White, 2px 3px 0px 1px Plum;
+  flex: 1;
+}
+
+.onethirdbox {
+  width: calc(33% - 5px);
+  background-color: #f0fafe;
+  border: 1px solid #87d7fd;
+  flex: 1 1 0;
+}
+
+.twothirdsbox {
+  width: calc(66% - 5px);
+  background-color: #fef8e7;
+  border: 1px solid #fecd2f;
+  flex: 2 1 0;
+}
+
+.tinybox {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 1px 1px 1px 1px; /* top, right, bottom, left*/
+  border: 1px solid;
+  border-radius: 5px;
+  width: calc(10% - 5px);
+  padding-top: calc(10% - 5px);
+  overflow: auto;
+}
+
+.floatright {
+  float:right;
+  margin-left:5px;
+}
+
+.floatleft {
+  float:left;
+  margin-right:5px;
+}
+
+.centered#navigation {t
+ justify-content: center;
+ gap: 0 10px;
+ padding: 0;
+}
+
+
+.centeralign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.verticalalign {
+  width:100%;        // +1 to @RonM
+    position: absolute;
+    text-align: center;
+    padding-top:100%;
+    -webkit-transform: translateY(-50%); /* child now centers itself relative to the midline based on own contents */
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Matrix(Dx=0,Dy=0)'; /*IE8 */
+    filter: progid:DXImageTransform.Microsoft.Matrix(Dx=0,Dy=0); /*IE6, IE7*/
+    transform: translateY(-50%);  
+}
+
+.marquee-container{
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-text{
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 0.75s linear infinite;
+}
+
+@keyframes marquee{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.spin {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin{
+    0% {
+        rotate: 0deg;
+    }
+    50% {
+        rotate: 180deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+.bounce {
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0.8, 1.2) translateY(0px);
+    }
+    50% {
+        transform: scale(1.2, 0.8) translateY(10px);
+    }
+    100% {
+        transform: scale(0.8, 1.2) translateY(0px);
+    }
+}
+
+.spintd {
+    display: inline-block;
+    animation: spintd 5s linear infinite;
+    transform-style: preserve-3d;
+    
+}
+@keyframes spintd {
+    0% {
+        transform: rotateY(0deg) perspective(1000px);
+    }
+    50% {
+        transform: rotateY(180deg) perspective(1000px);
+    }
+    100% {
+        transform: rotateY(360deg) perspective(1000px);
+    }
+}
+
+.slam {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 800px) {
+  .slam {
+    flex-wrap: wrap;
+  }
+}
+
+.gfx {
+  
+}
+
+@media (min-width: 413px) and (max-width: 462px), (min-width: 276px) and (max-width: 308px), (min-width: 875px) and (max-width: 948px) {
+  .gfx img {
+    width: 14%;
+  }
+}
