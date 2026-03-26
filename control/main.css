@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(38, 38, 220);
+    margin:0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container{
+    background-image: url(jail-bars.png);
+    height:100vh;
+    display:flex;
+    align-items: center;
+    object-fit: contain;
+    justify-content: space-evenly;
+    border-color: black;
+    border-width: 2px;
+}
+
+
+
+.box-1{
+    width:180px;
+    height:180px;
+    overflow:hidden;
+    border-radius: 60px;
+}
+
+.box-1 img{
+width:180px;
+height:180px;
+object-fit: contain;
+}
+
+.box-2{
+    width:180px;
+    height:180px;
+    overflow:hidden;
+    border-radius: 60px;
+}
+
+.box-2 img{
+    width:180px;
+    height:180px;
+    object-fit:contain;
+}
+
+.box-3{
+    width:180px;
+    height:180px;
+    overflow:hidden;
+    border-radius: 60px;
+}
+
+.box-3 img{
+    width:180px;
+    height:180px;
+    object-fit: contain;
+}
+
+.escape-jail{
+    width:100vw;
+    overflow: hidden;
+     object-fit:contain;
+}
+
+.escape-jail img{
+    width:100vw;
+    object-fit:contain;
+}
+
+
+
+
+
