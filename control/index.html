@@ -2,27 +2,42 @@
 <html>
     <head>
         <title>Jquery exercise</title>
+         <link rel="stylesheet" href="jquery-ui.css">
         <link rel="stylesheet" href="main.css">
+       
     </head>
     <body>
     
 
       <div class="container">
-        <div class="box-1">
+        <div class="drag-box"><h1>DRAG them out of jail to play soccer!</h1></div>
+        <div class="box-1 plush">
           <img src="bachira-plush.jpg">
         </div>
-        <div class="box-2">
+        <div class="box-2 plush">
           <img src="isagi-plush.jpg">
         </div>
-        <div class="box-3">
+        <div class="box-3 plush">
           <img src="rin-plush.jpg">
         </div>
       </div>
       
       <div class="escape-jail">
-        <img src="real-soccer-field.jpeg">
+          <img class="soccer-image" src="real-soccer-field.jpeg">
       </div>
         
+      <div class="pop-up">
+        <h2>THATS ENOUGH PLAYERS</h2>
+
+        <button 
+      class="reveal-btn">X</button>
+
+      </div>
+
+<div id="resizable" class="ui-widget-content">
+  <h3 class="ui-widget-header">Resizable</h3>
+</div>
+
 
 
         <script src="jquery-4.0.0.min.js"></script>
