@@ -3,17 +3,50 @@
 }
 
 body{
-    background-image: url(5e5498836db0fa6b458dd3fefb310f41.gif) ;
+    background-image: url(heart.gif) ;
     background-repeat: repeat ;
     background-position: center;
     background-attachment: fixed;
     margin:0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    place-items: center;
+    overflow: hidden;
 }
 
 
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+.welcome-container{
+    display:flex;
+    flex-direction: column;
+    max-width: 900px;
+    max-height:500px;
+    background-color:rgb(255, 255, 218) ;
+    align-items: center;
+     margin:180px;
+     justify-content: center;
+     position:relative;
+     padding:10px;
+     border-color: rgb(156, 230, 255);
+     border-width: 6px;
+     border-style:solid;
+     border-radius: 10px;
+     
+}
+
+.usagi-img {
+     overflow:hidden;
+    object-fit: contain;
+
+ 
+}
+
+.usagi-img img{
+    width:450px;
+    height:450px;
+    object-fit: contain;
 }
 
