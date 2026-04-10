@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+    cursor: url("Anime-cur.cur"), auto;
+}
+
+body{
+    background-image: url(background-img-mainpage.gif) ;
+    background-repeat: repeat ;
+    background-position: center;
+    background-attachment: fixed;
+    margin:0;
+    place-items: center;
+    overflow: hidden;
+    font-family:"Galindo", sans-serif;
+      font-weight: 400;
+      cursor: url("Anime-cur.cur"), auto;
+}
