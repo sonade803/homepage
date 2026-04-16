@@ -40,13 +40,10 @@ main{
 .left-image{
 object-fit: scale-down;
 display:inline-block;
+height:200;
+width:400;
 }
 
-.right-image{
-height:100px;
-width:200px;
-display:inline;
-}
 
 header, footer{
     text-align: center;
