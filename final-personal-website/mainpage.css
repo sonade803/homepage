@@ -4,14 +4,108 @@
 }
 
 body{
-    background-image: url(background-img-mainpage.gif) ;
+    background-image: url(heartgrid.gif) ;
     background-repeat: repeat ;
     background-position: center;
     background-attachment: fixed;
-    margin:0;
     place-items: center;
     overflow: hidden;
     font-family:"Galindo", sans-serif;
       font-weight: 400;
       cursor: url("Anime-cur.cur"), auto;
+}
+
+
+.container{
+    background-color:  rgb(198, 234, 255);
+background-image:repeating-linear-gradient(0deg, transparent, transparent 2px, #fff 2px, #fff 4px );
+background-size: auto auto;
+padding:.5em 1em;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    max-width:1100px;
+    margin:0 auto;
+    border-radius: 5px;
+    border:2px solid rgb(38, 208, 255);
+}
+
+main{
+    display:flex;
+    gap:10px;
+
+}
+
+
+.left-image{
+object-fit: scale-down;
+display:inline-block;
+}
+
+.right-image{
+height:100px;
+width:200px;
+display:inline;
+}
+
+header, footer{
+    text-align: center;
+    display:flex;
+}
+
+ header, .left, .center, .right, footer {
+    border:1px solid #ff82da;;
+    padding:20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    outline: 2px solid #ffc5ee;
+ }
+
+.center{
+    width:50%;
+}
+
+.left, .right{
+    width:25%;
+}
+
+.center-top {
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.bar {
+    padding: 7px;
+    width: 100.5%;
+    border-top: 1px dotted ;
+    border-bottom: 2px dotted #666666;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 2px;
+    margin-bottom: 5.5px;
+    margin-top: 5px;
+    margin-left: -10px;
+    color: #ff82da;
+    margin-left: -10px;
+    background-color:content rgb(255, 222, 221);
+    background: linear-gradient(
+        90deg,
+        rgba(255, 222, 221, 1) 0%,
+        rgba(255, 232, 217, 1) 10%,
+        rgba(255, 244, 212, 1) 20%,
+        rgba(231, 255, 224, 1) 30%,
+        rgba(227, 252, 236, 1) 40%,
+        rgba(226, 249, 248, 1) 50%,
+        rgba(225, 237, 254, 1) 60%,
+        rgba(225, 226, 255, 1) 70%,
+        rgba(243, 224, 255, 1) 80%,
+        rgba(251, 212, 239, 1) 90%,
+        rgba(255, 229, 239, 1) 100%
+    );
 }
