@@ -9,21 +9,35 @@ body{
     background-position: center;
     background-attachment: fixed;
     place-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
     font-family:"Galindo", sans-serif;
       font-weight: 400;
       cursor: url("Anime-cur.cur"), auto;
 }
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+.outer{
+        background-image: url(index/lacebg.png);
+        background-size: 100% auto;
+        width: 1000px;
+        height: 1000px;
+        filter: drop-shadow(0px 0px .7px #a37367);
+        margin: auto;
+    }
 
 
 .container{
     background-color:  rgb(198, 234, 255);
 background-image:repeating-linear-gradient(0deg, transparent, transparent 2px, #fff 2px, #fff 4px );
 background-size: auto auto;
-padding:.5em 1em;
+padding:10px;
     display:flex;
     flex-direction: column;
-    gap:10px;
+    gap:20px;
     max-width:1100px;
     margin:0 auto;
     border-radius: 5px;
@@ -32,16 +46,47 @@ padding:.5em 1em;
 
 main{
     display:flex;
-    gap:10px;
+    gap:20px;
 
 }
 
+.left-image {
+  border: 1px solid rgb(233, 34, 255);
+  border-radius: 5px;
+  margin: 4px;
+  padding: 4px;
+  text-align: center;
+  flex-direction: row;
+   background-color: rgb(255, 255, 255);
+}
+.child-1 {
+  display: inline-block;
+  padding: 1rem 1rem;
+}
 
-.left-image{
-object-fit: scale-down;
-display:inline-block;
-height:200;
-width:400;
+.child-2 {
+  display: inline-block;
+  padding: 1rem 1rem;
+}
+
+.child-2 img{
+    height:75px;
+    width:300px;
+}
+
+.child-3 {
+  display: inline-block;
+  padding: 1rem 1rem;
+}
+
+.child-3 img{
+    height:75px;
+    width: 250px;
+}
+
+header{
+    background: url(yellowstars.gif) repeat center fixed;
+    justify-content: center;
 }
 
 
@@ -50,22 +95,33 @@ header, footer{
     display:flex;
 }
 
+footer{
+     background-color: rgb(255, 255, 255);
+}
+
+
  header, .left, .center, .right, footer {
     border:1px solid #ff82da;;
-    padding:20px;
-    background-color: rgb(255, 255, 255);
+    padding:14px;
     border-radius: 5px;
     outline: 2px solid #ffc5ee;
  }
 
 .center{
     width:50%;
+     background-color: rgb(255, 255, 255);
 }
 
 .left, .right{
     width:25%;
 }
 
+.right{
+       background-color: rgb(255, 255, 255);
+}
+.left{
+    background: url(greenbg.gif) repeat center fixed;
+}
 .center-top {
     width: 100%;
     margin-left: 5px;
@@ -105,4 +161,48 @@ header, footer{
         rgba(251, 212, 239, 1) 90%,
         rgba(255, 229, 239, 1) 100%
     );
+}
+
+.navigation{
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.nav-bar{
+    padding: 7px;
+    width: 100.5%;
+    border-top: 1px dotted ;
+    border-bottom: 2px dotted #666666;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Galindo" sans-serif;
+    padding-bottom: 2px;
+    margin-bottom: 5.5px;
+    margin-top: 5px;
+    margin-left: -10px;
+    color: #ff82da;
+    margin-left: -10px;
+    background-color:content rgb(255, 222, 221);
+    background: linear-gradient(
+        90deg,
+        rgba(255, 222, 221, 1) 0%,
+        rgba(255, 232, 217, 1) 10%,
+        rgba(255, 244, 212, 1) 20%,
+        rgba(231, 255, 224, 1) 30%,
+        rgba(227, 252, 236, 1) 40%,
+        rgba(226, 249, 248, 1) 50%,
+        rgba(225, 237, 254, 1) 60%,
+        rgba(225, 226, 255, 1) 70%,
+        rgba(243, 224, 255, 1) 80%,
+        rgba(251, 212, 239, 1) 90%,
+        rgba(255, 229, 239, 1) 100%
+    );
+    
 }
