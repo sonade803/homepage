@@ -446,6 +446,7 @@ padding-bottom:1.5px;
     box-sizing: border-box;
     flex-direction: column;
     height:300px;
+    justify-content: space-evenly;
 }
 
 .blinky-bar {
@@ -480,6 +481,18 @@ padding-bottom:1.5px;
 
 
 .small-container{
-    height:10px;
-    width:100px;
+    display:flex;
+    height:20px;
+    width:200px;
+}
+
+.blink-contain{
+flex-direction: column;
+    row-gap: 20px;
+    justify-content: space-between;
+}
+
+.small-container img{
+    height:20px;
+    width:200px;
 }
