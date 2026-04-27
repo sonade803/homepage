@@ -227,6 +227,7 @@ footer{
     width: 70px;
     background-color:#fff7cf;
     border-radius:5px;
+     z-index:999;
 }
 
 #toolbar * {
@@ -249,14 +250,25 @@ footer{
     border: none;
     border-radius: 4px;
     color:white;
-    padding: 2px;
     font-family: Arial, Helvetica, sans-serif;
     width:80%;
     text-align: left;
     font-size: 12px;
 }
 
+.drawing-board{
+    position:relative;
+ 
+}
 
+canvas{
+    position:relative;
+    width:820px;
+    height:540px;
+     top:-85px;
+     left:-260px;
+      z-index:800;
+}
 
 
 
