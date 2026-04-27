@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    cursor: url("Anime-cur.cur"), auto;
+    cursor: url("cute-cursor.gif"), auto;
 }
 
 body{
@@ -13,10 +13,16 @@ body{
     overflow: hidden;
     font-family:"Galindo", sans-serif;
       font-weight: 400;
-      cursor: url("Anime-cur.cur"), auto;
+      cursor: url("cute-cursor.gif"), auto;
 }
 
+a:hover{
+    cursor:url("cursor.png"), auto;
+}
 
+.auto{ 
+    cursor: url("cute-cursor.gif"), auto;
+}
 
 body::-webkit-scrollbar {
   display: none;
@@ -95,4 +101,6 @@ filter:drop-shadow(2px 2px 0.2rem rgb(255, 90, 244));
 color:rgb(255, 22, 162);
 
 }
+
+
 
