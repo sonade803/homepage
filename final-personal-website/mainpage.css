@@ -151,6 +151,7 @@ footer{
     background: white;
     padding: 10px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .bar {
@@ -165,6 +166,7 @@ footer{
     margin-top: 5px;
     margin-left: -10px;
     color: #ff82da;
+     font-family:"Galindo", sans-serif;
     margin-left: -10px;
     background-color:content rgb(255, 222, 221);
     background: linear-gradient(
@@ -181,6 +183,17 @@ footer{
         rgba(251, 212, 239, 1) 90%,
         rgba(255, 229, 239, 1) 100%
     );
+}
+
+.float {
+    float: right;
+    margin-left: 3.5px;
+    padding:3px;
+}
+
+.float img{
+    height:100px;
+    width:100px;
 }
 
 .container-1 {
