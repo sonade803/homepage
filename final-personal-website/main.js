@@ -229,6 +229,9 @@ const canvasOffsetY = canvas.offsetTop;
 canvas.width = window.innerWidth - canvasOffsetX;
 canvas.height = window.innerHeight - canvasOffsetY;
 
+//canvas.width = 200;
+//canvas.height = 200;
+
 let isPainting = false;
 let lineWidth = 5;
 let startX;
@@ -259,7 +262,7 @@ const draw = (e) => {
     ctx.lineWidth = lineWidth;
     ctx.lineCap = 'round';
 
-    ctx.lineTo(e.clientX - canvasOffsetX, e.clientY);
+    ctx.lineTo(e.clientX, e.clientY);
     ctx.stroke();
 }
 

@@ -277,10 +277,10 @@ footer{
 
 canvas{
     position:relative;
-    width:820px;
+     width:820px;
     height:540px;
      top:-85px;
-     left:-260px;
+     left:-260px; 
       z-index:800;
 }
 
@@ -362,6 +362,24 @@ filter:drop-shadow(2px 2px 0.2rem rgb(255, 90, 244));
 color:rgb(255, 22, 162);
 }
 
+.kero{
+  width: 100%;
+    height:115px;
+  
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    background: white;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    text-align: center;
+    overflow:hidden;  
+}
+
+.kero img{
+    height:115px;
+    width:210px;
+}
+
 .chatbox{
       z-index:999;
 }
@@ -380,7 +398,7 @@ color:rgb(255, 22, 162);
 
 .btm-left{
 width:50%;
-height:130px;
+height:150px;
 background-color: white;
 border: 1px solid rgb(169, 169, 169);
 display: flex;
@@ -402,6 +420,7 @@ display: flex;
         padding-bottom: 3px;
         font-family: Arial, Helvetica, sans-serif;
         overflow-y: auto;
+        line-height: 1.0;
 }
 
 .cbl-bar{
@@ -439,12 +458,31 @@ display: flex;
 
 .btm-right{
 width:50%;
-height:130px;
+height:150px;
 background-color: white;
 border: 1px solid rgb(169, 169, 169);
 display:flex;
 flex-direction: row;
  border-radius: 5px;
+ flex-wrap: wrap;
+ padding:10px;
+ justify-items: center;
+}
+
+.button-div{
+   gap:5px;
+   height:50px;
+   width:60px;
+   border-radius: 5px;
+    overflow: hidden;
+}
+
+.button-div img{
+    height: 60px;
+    width:70px;
+    border-radius:5px;
+    padding:5px;
+    object-fit: contain;
 }
 
 .stamps{
