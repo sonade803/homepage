@@ -507,28 +507,15 @@ flex-direction: row;
 
 }
 
-.stamp-box{
-   display:block;
+.marquee{
+ 
   flex-direction: row;
-   position: absolute;
+   
   align-items: center;
   flex-wrap: nowrap;
-  width:300%;
+  width:450%;
   overflow:hidden;
-     animation: marquee 5s linear infinite;
 
-}
-
-.stamp-box span{
-float: left;
-  width: 50%;
-  flex-wrap: nowrap;
-  vertical-align: middle;
-}
-
-@keyframes marquee {
-  0% { left: 0; }
-  100% { left: -100%; }
 }
 
 
