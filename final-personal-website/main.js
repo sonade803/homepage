@@ -218,97 +218,91 @@ $('#lol').click(function() {
 });
 
 
-
+const CLIENT_ID = "b4fb95e0edc434c";
 const canvas = document.getElementById('drawing-board');
-const toolbar = document.getElementById('toolbar');
 const ctx = canvas.getContext('2d');
+ontext.fillStyle = "white";
+context.fillRect(0, 0, canvas.width, canvas.height);
 
-const canvasOffsetX = canvas.offsetLeft;
-const canvasOffsetY = canvas.offsetTop;
+let restore_array = [];
+let start_index = -1;
+let stroke_color = "black";
+let stroke_width = "2";
+let is_drawing = false;
 
-canvas.width = window.innerWidth - canvasOffsetX;
-canvas.height = window.innerHeight - canvasOffsetY;
-
-//canvas.width = 200;
-//canvas.height = 200;
-
-let isPainting = false;
-let lineWidth = 5;
-let startX;
-let startY;
-
-toolbar.addEventListener('click', e => {
-    if (e.target.id === 'clear') {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-    }
-});
-
-toolbar.addEventListener('change', e => {
-    if(e.target.id === 'stroke') {
-        ctx.strokeStyle = e.target.value;
-    }
-
-    if(e.target.id === 'lineWidth') {
-        lineWidth = e.target.value;
-    }
-    
-});
-
-const draw = (e) => {
-    if(!isPainting) {
-        return;
-    }
-
-    ctx.lineWidth = lineWidth;
-    ctx.lineCap = 'round';
-
-    ctx.lineTo(e.clientX, e.clientY);
-    ctx.stroke();
+function change_color(element) {
+  stroke_color = element.style.background;
 }
 
-canvas.addEventListener('mousedown', (e) => {
-    isPainting = true;
-    startX = e.clientX;
-    startY = e.clientY;
-});
+function start(event) {
+  is_drawing = true;
+  context.beginPath();
+  context.moveTo(getX(event), getY(event));
+  event.preventDefault();
+}
 
-canvas.addEventListener('mouseup', e => {
-    isPainting = false;
-    ctx.stroke();
-    ctx.beginPath();
-});
+function draw(event) {
+  if (!is_drawing) return;
+  context.lineTo(getX(event), getY(event));
+  context.strokeStyle = stroke_color;
+  context.lineWidth = stroke_width;
+  context.lineCap = "round";
+  context.lineJoin = "round";
+  context.stroke();
+  event.preventDefault();
+}
 
-canvas.addEventListener('mousemove', draw);
+function stop(event) {
+  if (!is_drawing) return;
+  context.stroke();
+  context.closePath();
+  is_drawing = false;
+  restore_array.push(context.getImageData(0, 0, canvas.width, canvas.height));
+  start_index++;
+  event.preventDefault();
+}
 
+function getX(event) {
+  return event.pageX
+    ? event.pageX - canvas.offsetLeft
+    : event.targetTouches[0].pageX - canvas.offsetLeft;
+}
 
+function getY(event) {
+  return event.pageY
+    ? event.pageY - canvas.offsetTop
+    : event.targetTouches[0].pageY - canvas.offsetTop;
+}
 
-var $ = require("jquery");
-require("jquery.marquee");
-//if you have images in marquee
-$(window).load(function() {
-    $('.marquee').marquee();
-});
+canvas.addEventListener("touchstart", start, false);
+canvas.addEventListener("touchmove", draw, false);
+canvas.addEventListener("touchend", stop, false);
+canvas.addEventListener("mousedown", start, false);
+canvas.addEventListener("mousemove", draw, false);
+canvas.addEventListener("mouseup", stop, false);
+canvas.addEventListener("mouseout", stop, false);
 
-/**
- * Example of starting a plugin with options.
- * I am just passing some of the options in the following example.
- * you can also start the plugin using $('.marquee').marquee(); with defaults
-*/
+function Restore() {
+  if (start_index <= 0) {
+    Clear();
+  } else {
+    start_index--;
+    restore_array.pop();
+    context.putImageData(restore_array[start_index], 0, 0);
+  }
+}
 
-$('.marquee').marquee({
-	//duration in milliseconds of the marquee
-	duration: 15000,
-	//gap in pixels between the tickers
-	gap: 50,
-	//time in milliseconds before the marquee will start animating
-	delayBeforeStart: 0,
-	//'left' or 'right'
-	direction: 'left',
-	//true or false - should the marquee be duplicated to show an effect of continues flow
-	duplicated: true,
-	//duplicate the message three times
-	duplicateCount: 3
-});
+function Clear() {
+  context.fillStyle = "white";
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.fillRect(0, 0, canvas.width, canvas.height);
+  restore_array = [];
+  start_index = -1;
+}
+
+context.drawImage = function() {
+	console.warn("noo >:(");
+};
 
 
 

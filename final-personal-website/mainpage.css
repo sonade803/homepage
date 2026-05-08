@@ -44,7 +44,18 @@ ul{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-
+.snoopy{
+   width: 150px;
+        height: 167px;
+        background-image: url(snoopy.gif);
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 1170px;
+        z-index: 2; 
+}
 
 
 .container{
@@ -55,7 +66,7 @@ padding:10px;
     display:flex;
     flex-direction: column;
     gap:20px;
-    max-width:1100px;
+    max-width:1250px;
     margin:0 auto;
     border-radius: 5px;
     border:2px solid rgb(38, 208, 255);
@@ -130,17 +141,18 @@ footer{
 }
 
 .left, .right{
-    width:25%;
     text-align: center;
 }
 
 .right{
        background: url(misc302.gif) repeat center fixed;
        justify-items: center;
+       width:22%;
 }
 .left{
     background: url(greenbg.gif) repeat center fixed;
     justify-content: center;
+    width:22%;
 }
 .center-top {
     width: 100%;
@@ -206,82 +218,19 @@ footer{
     border: 1px solid rgb(169, 169, 169);
 }
 
-.draw-bar {
-    padding: 7px;
-    width: 100.5%;
-    border-top: 1px dotted ;
-    border-bottom: 2px dotted #666666;
-    font-size: 18px;
-    font-weight: 600;
-    padding-bottom: 2px;
-    margin-bottom: 5.5px;
-    margin-top: 5px;
-    margin-left: -10px;
-    color: #ff82da;
-    margin-left: -10px;
-    background-color:content rgb(255, 222, 221);
-    background: linear-gradient(
-        90deg,
-        rgba(255, 222, 221, 1) 0%,
-        rgba(255, 232, 217, 1) 10%,
-        rgba(255, 244, 212, 1) 20%,
-        rgba(231, 255, 224, 1) 30%,
-        rgba(227, 252, 236, 1) 40%,
-        rgba(226, 249, 248, 1) 50%,
-        rgba(225, 237, 254, 1) 60%,
-        rgba(225, 226, 255, 1) 70%,
-        rgba(243, 224, 255, 1) 80%,
-        rgba(251, 212, 239, 1) 90%,
-        rgba(255, 229, 239, 1) 100%) 
-}
-
-#toolbar {
-    display: flex;
-    flex-direction: column;
-    width: 70px;
-    background-color:#fff7cf;
-    border-radius:5px;
-     z-index:999;
-}
-
-#toolbar * {
-    margin-bottom: 6px;
-}
-
-#toolbar label {
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    
-}
-
-#toolbar input {
-    width: 70%;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#toolbar button {
-    background-color: royalblue;
-    border: none;
-    border-radius: 4px;
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
-    width:80%;
-    text-align: left;
-    font-size: 12px;
-}
 
 .drawing-board{
     position:relative;
+    
  
 }
 
 canvas{
-    position:relative;
-     width:820px;
-    height:540px;
-     top:-85px;
-     left:-260px; 
-      z-index:800;
+    cursor: crosshair;
+    background-color: white;
+    margin-top: 10px;
+    border-radius:5px;
+    border: 1px solid rgb(169, 169, 169);
 }
 
 
@@ -335,9 +284,9 @@ canvas{
 }
 
 .buttons{
-height:28px;
+height:30px;
 text-align:left;
-width:170px;
+width:85%;
 font-family:Arial, Helvetica, sans-serif;
 background-image:linear-gradient(to top,rgba(227, 247, 255,0.1),rgba(60, 160, 255,0.3) 80%, rgba(227, 247, 255,0.1) 90%);
   background-color: rgba(25,200,255, 0.0);
@@ -364,8 +313,7 @@ color:rgb(255, 22, 162);
 
 .kero{
   width: 100%;
-    height:115px;
-  
+    height:130px;
     border: 1px solid darkgray;
     border-radius: 5px;
     background: white;
@@ -376,8 +324,8 @@ color:rgb(255, 22, 162);
 }
 
 .kero img{
-    height:115px;
-    width:210px;
+    height:130px;
+    width:100%;
 }
 
 .chatbox{
@@ -398,7 +346,7 @@ color:rgb(255, 22, 162);
 
 .btm-left{
 width:50%;
-height:150px;
+height:185px;
 background-color: white;
 border: 1px solid rgb(169, 169, 169);
 display: flex;
@@ -458,7 +406,7 @@ display: flex;
 
 .btm-right{
 width:50%;
-height:150px;
+height:185px;
 background-color: white;
 border: 1px solid rgb(169, 169, 169);
 display:flex;
@@ -471,18 +419,53 @@ flex-direction: row;
 
 .button-div{
    gap:5px;
-   height:50px;
-   width:60px;
+   height:58px;
+   width:58px;
    border-radius: 5px;
     overflow: hidden;
+    align-items: center;
 }
 
 .button-div img{
     height: 60px;
-    width:70px;
+    width:60px;
     border-radius:5px;
     padding:5px;
     object-fit: contain;
+    align-items: center;
+    justify-content: center;
+}
+
+.games-bar{
+       padding: 7px;
+    width: 100.5%;
+    border-top: 1px dotted ;
+    border-bottom: 2px dotted #666666;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Galindo" sans-serif;
+    padding-bottom: 2px;
+    margin-bottom: 5.5px;
+    text-align: left;
+    margin-top: 5px;
+    height:40px;
+    color: #ff82da;
+    margin-left: -10px;
+    background-color:content rgb(255, 222, 221);
+    background: linear-gradient(
+        90deg,
+        rgba(255, 222, 221, 1) 0%,
+        rgba(255, 232, 217, 1) 10%,
+        rgba(255, 244, 212, 1) 20%,
+        rgba(231, 255, 224, 1) 30%,
+        rgba(227, 252, 236, 1) 40%,
+        rgba(226, 249, 248, 1) 50%,
+        rgba(225, 237, 254, 1) 60%,
+        rgba(225, 226, 255, 1) 70%,
+        rgba(243, 224, 255, 1) 80%,
+        rgba(251, 212, 239, 1) 90%,
+        rgba(255, 229, 239, 1) 100%
+    ); 
 }
 
 .stamps{
@@ -508,15 +491,27 @@ flex-direction: row;
 }
 
 .marquee{
- 
   flex-direction: row;
-   
   align-items: center;
   flex-wrap: nowrap;
-  width:450%;
-  overflow:hidden;
-
+  white-space: nowrap;
+  animation: stamp 13s linear infinite;
+  transform: translate(183px, -1px);
+    padding:0;
 }
+
+@keyframes stamp {
+  0% {
+    transform: translate(183px, -1px);
+}
+100% {
+    transform: translate(-1440px, -1px);
+}
+}
+/* @keyframes stamp { */
+  /* 0% { transform: translateX(0); } */
+  /* 100% { transform: translateX(-100%); } */
+
 
 
 
@@ -544,8 +539,8 @@ width: 100%;
 
 .img2 {
     position:relative;
-    width:100px;
-    height:100px;
+    width:105px;
+    height:105px;
     background-color:black;
     color: black;
     z-index:999;
@@ -555,9 +550,9 @@ width: 100%;
 .img1{
     position: absolute;
     width:auto;
-    height:100px;
+    height:105px;
     z-index:800;
-    left:1120px;
+    left:1150px;
    animation: spin 4s linear infinite;
     animation-play-state: paused;
 }
@@ -679,4 +674,50 @@ flex-direction: column;
 .small-container img{
     height:20px;
     width:200px;
+}
+
+.flan{
+   display:flex; 
+   width: 100%;
+    height:90px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    background: white;
+    box-sizing: border-box;
+    margin-top: 10px;
+    text-align: center;
+    overflow:hidden;  
+}
+
+.flan img {
+    height:90px;
+    width:100%; 
+}
+
+
+
+.anime-boys{
+width:100%;
+height:185px;
+background-color: white;
+border: 1px solid rgb(169, 169, 169);
+display:flex;
+flex-direction: row;
+ border-radius: 5px;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+}
+
+.anime-contain{
+    flex-direction:row;
+    width:200px;
+    height:150px;
+    margin:10px;
+    align-items:center;
+}
+
+.anime-contain img{
+    width:100%;
+    height:150px;
+    display:block;
 }

@@ -11,7 +11,7 @@
 <link rel="icon" href="favicon (2).ico">
     </head>
     <body>
-
+<div class="snoopy"></div>
 <div class="outer">
 <div class="container">
             <header>
@@ -50,18 +50,28 @@
                     
                     <div class="stamps">
                         <div class="marquee">
-                                <img src="stamp-1.gif">
+                                <span><img src="stamp-1.gif">
                                 <img src="stamp-2.gif">
                                 <img src="stamp-3.gif">
                                <img src="stamp-5.gif">
-                               <img src="stamp-6.png">
+                               <img src="stamp-9.png">
                                 <img src="stamp-6.png">
                                 <img src="stamp-7.png">
                                 <img src="stamp-8.png">
+                                <img src="stamp-13.png">
+                                <img src="stamp-4.gif">
+                                <img src="stamp-10.gif">
+                                <img src="stamp-12.gif">
+                                <img src="stamp-14.png">
+                                <img src="stamp-15.gif">
+                                <img src="stamp-16.png">
+                                <img src="stamp-17.gif">
+                                <img src="stamp-18.png">
+                        </span>
                         </div>
                     </div>
                     <div class="kero">
-                        <img src="kero-pudding.gif">
+                        <img src="sakura-cute.gif">
                     </div>
                 </div>
                 <div class="center">
@@ -82,22 +92,21 @@
                       <font color="blue">☆</font>
                       <br>
                         Hi everyone that happens to look at this site! This site was created as a final project for my web design class and is an experiment for myself...I've always wanted to make an <font color="#7efc80">online space</font> for my personal interests so yeahhh 
-                        <img src="rainbow.gif">
                      </p>  
+
+                     <img src="flower-divider.gif">
                 </div>
-  <section class="container-1">
-        <div id="toolbar">
-            <div class="draw-bar">Draw!</div>
-            <label for="stroke">Stroke</label>
-            <input id="stroke" name='stroke' type="color">
-            <label for="lineWidth">Line Width</label>
-            <input id="lineWidth" name='lineWidth' type="number" value="5">
-            <button id="clear">Clear!</button>
-        </div>
-        <div class="drawing-board">
-            <canvas id="drawing-board"></canvas>
-        </div>
-    </section>
+    <div class="drawing-board"> 
+            <canvas id="drawing-board" width="580" height="300"></canvas>
+<div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
+  <div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
+
+  <button onclick="Restore()">Undo</button>
+  <button onclick="Clear()">Clear</button>
+
+  <input type="color" oninput="stroke_color = this.value">
+  <input type="range" min="1" max="100" oninput="stroke_width = this.value">
+    </div>
 
     <div class="center-bottom">
         <div class="btm-left">
@@ -107,10 +116,13 @@
             <div class="update-log">
             <p> 4.28.26 creating more containers </p>
             <p> 4.29.26 more images! </p>
+            <p> 5.04.26 fixing problems with image loop </p>
+            <p> 5.08.26 put images in footer</p>
         </div>
         </div>
 
         <div class="btm-right">
+            <div class="games-bar">Games</div>
             <div class="button-div">
                 <a href="https://jamesland.org/flash/subway/tokyo/">
                        <img src="subway-surfer.jpg">
@@ -125,11 +137,6 @@
             </div>
 
             <div class="button-div">
-                <a href="https://jamesland.org/flash/crossy-road">
-                       <img src="Crossy_Road_Icon.png">
-                </a>
-            </div>
-            <div class="button-div">
                  <a href="https://jamesland.org/flash/papascheeseria">
                      <img src="gameicon-2.jpg">
                 </a>
@@ -141,7 +148,26 @@
                 </a>
             </div>
             <div class="button-div">
+                <a href="https://jamesland.org/flash/magic-cat-academy-2">
+                 <img src="magic-academy.gif">
+                </a>  
+            </div>
 
+            <div class="button-div">
+                <a href="https://jamesland.org/flash/fireboy-and-watergirl-in-the-forest-temple">
+                <img src="fireboy-watergirl.jpg">
+                </a>
+            </div>
+
+            <div class="button-div">
+                <a href="https://jamesland.org/flash/Games/2048/">
+                 <img src="2048_press.png">
+                </a>  
+            </div>
+            <div class="button-div">
+                <a href="https://jamesland.org/flash/MotoX3M3">
+                   <img src="moto3.jpg">
+                </a> 
             </div>
         </div>
 
@@ -324,11 +350,38 @@ document.write("</table></p>");
         
     
 </div>
-                </div>
+
+<div class="flan">
+    <img src="flan-cute.jpg">
+</div>
+
+         </div>
+       
 
             </main>
             <footer>
-               <p><i> blue lock is one of the best sports mangas ever.</i></p> 
+               <div class="anime-boys">
+                <div class="anime-contain">
+                    <img src="luffy-cutie.jpg">
+                </div>
+
+<div class="anime-contain">
+        <img src="rin-cutie.jpg">            
+                </div>
+
+<div class="anime-contain">
+              <img src="saiki-cute.jpg">     
+                </div>
+
+<div class="anime-contain">
+              <img src="gon-cute.jpg">      
+                </div>
+
+<div class="anime-contain">
+                  <img src="naruto-cute.jpg">  
+                </div>
+
+               </div>
             </footer>
 
         </div>
@@ -338,7 +391,7 @@ document.write("</table></p>");
 
 
 
-    <script src="jquery.marquee.min.js" type="text
+    <script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js" type="text
 /javascript"></script>
         <script src="jquery-4.0.0.min.js"></script>
         <script src="jquery-ui.min.js"></script>
